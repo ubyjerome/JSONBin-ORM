@@ -1,7 +1,7 @@
 {
   "name": "jsonbin-orm",
   "version": "1.0.0",
-  "description": "\"A simple interface for interracting with jsonbin like you would if a regular database\"",
+  "description": "A lightweight ORM for interacting with JSON Bin as a database.",
   "main": "index.js",
   "scripts": {
     "start": "clear && node test.js"
@@ -20,5 +20,13 @@
     "axios": "^1.10.0",
     "uuid": "^11.1.0",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "keywords": [
+    "jsonbin",
+    "orm",
+    "database",
+    "json",
+    "api",
+    "nodejs"
+  ]
 }
