@@ -1,6 +1,6 @@
 const {
-    v4: uuidv4
-} = require('uuid');
+    randomUUID
+} = require('crypto');
 
 const {
     JsonBinAPI
@@ -47,7 +47,7 @@ async function addNewData(headers, data, binId, opFor, id, condition) {
 
     if (opFor === 'ALL') {
         if (!(data._id)) {
-            data._id = uuidv4();
+            data._id = randomUUID();
         }
         let record = rawData.record;
         if (!Array.isArray(record)) {
