@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "A lightweight ORM for interacting with JSON Bin as a database.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "start": "clear && node test.js"
+    "start": "node index.js",
+    "test":"clear && node test.js"
   },
   "repository": {
     "type": "git",
