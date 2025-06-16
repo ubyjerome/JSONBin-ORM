@@ -60,6 +60,25 @@ async function addNewData(headers, data, binId, opFor, id, condition) {
         return [];
     }
 
+    if (opFor === 'MANY') {
+        if (!condition || typeof condition !== "object") {
+            throw new Error("Invalid query condition supplied");
+        }
+        const record = rawData.record;
+        const updatedRecords = record.map(item => {
+            if (Object.keys(condition).every(key => item[key] === condition[key])) {
+                for (const key of Object.keys(data)) {
+                    if (checkKeyInSchema(key, binId)) {
+                        item[key] = data[key];
+                    }
+                }
+            }
+            return item;
+        });
+        await JsonBinAPI.put(`/v3/b/${binId}`, updatedRecords, headers);
+        return updatedRecords;
+    }
+
     return rawData;
 }
 

@@ -11,6 +11,8 @@ declare module "jsonbin-orm" {
     fetchById(id: string): Promise<any>;
     updateOneById(id: string, data: any): Promise<any>;
     deleteById(id: string): Promise<boolean>;
+    find(query: Object): Promise<any[]>;
+    updateMany(query: Object, data: any): Promise<any[]>;
   }
 
   export { bin, BinConfig };

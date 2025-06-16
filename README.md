@@ -70,6 +70,20 @@ const result = await myBin.deleteById("record-id");
 console.log(result);
 ```
 
+### Find Records by Query
+
+```javascript
+const records = await myBin.find({ name: "Alice" });
+console.log(records);
+```
+
+### Update Multiple Records by Query
+
+```javascript
+const updatedRecords = await myBin.updateMany({ age: 25 }, { age: 26 });
+console.log(updatedRecords);
+```
+
 ## Configuration
 
 - `binId`: The ID of your JSON Bin.
@@ -78,7 +92,11 @@ console.log(result);
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the GPL v3 License. See the [LICENSE](./LICENSE) file for details.
+
+## Schema Information
+
+Explore supported schema types and samples in the [schema types](./schema-types.md) file.
 
 ## Contributing
 
