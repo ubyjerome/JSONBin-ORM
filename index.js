@@ -10,6 +10,9 @@ const {
 const {
     addNewData
 } = require("./modules/addData");
+const {
+    deleteData
+} = require("./modules/deleteData")
 
 
 class bin {
@@ -80,7 +83,7 @@ class bin {
         }
     }
 
-    
+
     async deleteById(id) {
         try {
             return await deleteData(
