@@ -97,7 +97,7 @@ class bin {
     }
 
 
-    async find(query) {
+    async find(query = {}) {
         try {
             return await fetchData(
                 this.configs.headers,
