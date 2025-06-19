@@ -23,6 +23,9 @@ async function fetchData(headers, binId, opFor, id, condition) {
         if (!condition || typeof condition !== "object") {
             throw new Error("Invalid query condition supplied");
         }
+        if (Object.keys(condition).length === 0) {
+            return [];
+        }
         allData = rawData.record.filter(item => {
             return Object.keys(condition).every(key => item[key] === condition[key]);
         });
