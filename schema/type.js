@@ -1,4 +1,4 @@
-const supportedSchemaType = ["string", "number", "object", "array"];
+const supportedSchemaType = ["string", "number", "object", "array", "boolean"];
 module.exports = {
     supportedSchemaType
 }
